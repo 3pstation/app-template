@@ -1,0 +1,18 @@
+type = 'swf'
+
+dependencies {  
+	merged files('../eegeo-platform-public/eegeo-platform.swc') 
+}
+
+srcDirs += [
+    './src'
+    ]
+        
+additionalCompilerOptions += [
+    include_halo_theme,
+    '-load-config=' + custom_flex_config
+]
+
+resourceDirs += ['/html-template']
+
+mainClass = 'APP_NAMEApp.mxml'
