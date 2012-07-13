@@ -1,5 +1,9 @@
 ./run
 
+if [ $? -eq 1 ] ; then
+  exit 1
+fi 
+
 DIR=${PWD##*/}
 mv ./build/$DIR.swf ./build/APP_NAME.swf
 curl -X PUT -F app=@./build/APP_NAME.swf -F icon=@./icon.png -F name='DISPLAY_NAME' -F entry_point_name=APP_NAMEApp http://appstore.eegeo.com/apps/API_TOKEN

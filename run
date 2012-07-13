@@ -11,6 +11,7 @@ cp eegeo-platform-dependencies/swf-flex-config.xml ./swf-flex-config.xml
 echo "include '$DIR'" > ./settings.gradle
 
 ./eegeo-platform-dependencies/gradle/bin/gradle build
+RESULT=$?
 
 rm build.gradle
 rm gradle.properties
@@ -18,3 +19,5 @@ rm swf-flex-config.xml
 rm settings.gradle
 
 popd
+
+exit $RESULT
