@@ -1,5 +1,5 @@
 ./run
 
 DIR=${PWD##*/}
-mv ./build/$DIR.swf ./build/APP_NAMEApp.swf
-curl -F app=@./build/APP_NAMEApp.swf -F icon=@./icon.png -F name='Display Name' -F entry_point_name=APP_NAMEApp -F api_token=API_KEY http://appstore.mapply.com/apps
+mv ./build/$DIR.swf ./build/APP_NAME.swf
+curl -X PUT -F app=@./build/APP_NAME.swf -F icon=@./icon.png -F name='DISPLAY_NAME' -F entry_point_name=APP_NAMEApp http://appstore.eegeo.com/apps/API_TOKEN

@@ -1,9 +1,9 @@
 package
 {
+	import camera.CameraModel;
 	import lighting.GlobalLightValues;
 	import rendering.IEegeoRenderer;
-	import resources.sky.SkyController;	
-	import camera.CameraModel;
+	import resources.sky.SkyController;
 		
 	public class APP_NAMEAppRenderer
 	{

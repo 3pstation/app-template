@@ -1,7 +1,7 @@
 package
 {
-	import flash.display.Sprite;
 	import apps.IEntryPoint;
+	import flash.display.Sprite;
 	
 	public class APP_NAMEAppEntryPoint extends Sprite implements IEntryPoint
 	{
