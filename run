@@ -1,4 +1,6 @@
+chmod 755 init
 ./init
+
 
 DIR=${PWD##*/}
 pushd .
