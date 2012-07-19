@@ -16,7 +16,7 @@ pushd .
 
 cd src
 
-egrep -lr "\APP_NAME" . | xargs -l sed -i -e 's@APP_NAME@'"$1"'@g'
+egrep -lr "\APP_NAME" . | xargs sed -i -e 's@APP_NAME@'"$1"'@g'
 
 for FILE in * ; do 
   NEWFILE=$(echo $FILE | sed -e's/APP_NAME/'"$1"'/g'); 
@@ -25,5 +25,5 @@ done
 
 popd 
 
-egrep -lr "\APP_NAME" deploy.appstore | xargs -l sed -i -e 's@APP_NAME@'"$1"'@g'
-egrep -lr "\APP_NAME" build.gradle | xargs -l sed -i -e 's@APP_NAME@'"$1"'@g'
+egrep -lr "\APP_NAME" deploy.appstore | xargs sed -i -e 's@APP_NAME@'"$1"'@g'
+egrep -lr "\APP_NAME" build.gradle | xargs sed -i -e 's@APP_NAME@'"$1"'@g'
