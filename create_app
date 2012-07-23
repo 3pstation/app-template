@@ -19,7 +19,7 @@ cd src
 egrep -lr "\APP_NAME" . | xargs sed -i -e 's@APP_NAME@'"$1"'@g'
 
 for FILE in * ; do 
-  NEWFILE=$(echo $FILE | sed -e's/APP_NAME/'"$1"'/g'); 
+  NEWFILE=$(echo $FILE | sed 's/APP_NAME/'"$1"'/g'); 
   mv $FILE $NEWFILE ; 
 done
 
