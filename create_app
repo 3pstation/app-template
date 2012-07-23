@@ -31,3 +31,7 @@ egrep -lr "\APP_NAME" deploy.appstore | xargs sed -i -e 's@APP_NAME@'"$1"'@g'
 egrep -lr "\APP_NAME" build.gradle | xargs sed -i -e 's@APP_NAME@'"$1"'@g'
 
 rm -f *-e
+
+chmod 755 run
+chmod 755 init
+chmod 755 deploy.appstore
