@@ -23,7 +23,11 @@ for FILE in * ; do
   mv $FILE $NEWFILE ; 
 done
 
+rm -f *-e
+
 popd 
 
 egrep -lr "\APP_NAME" deploy.appstore | xargs sed -i -e 's@APP_NAME@'"$1"'@g'
 egrep -lr "\APP_NAME" build.gradle | xargs sed -i -e 's@APP_NAME@'"$1"'@g'
+
+rm -f *-e
