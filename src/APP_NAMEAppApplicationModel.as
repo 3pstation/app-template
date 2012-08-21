@@ -7,12 +7,12 @@ package
 	import maths.Units;
 	import scene.WorldMeshUpdater;
 	import streaming.StreamingController;
-	import streaming.StreamingVolume;
+	import streaming.volume.StreamingVolumeController;
 	
 	public class APP_NAMEAppApplicationModel
 	{				
 		[Inject]
-		public var streamingVolume:StreamingVolume;
+		public var streamingVolumeController:StreamingVolumeController;
 		
 		[Inject]
 		public var streamingController:StreamingController;
@@ -51,8 +51,8 @@ package
 		
 		public function update(dtMilliseconds:Number):void
 		{
-			streamingVolume.updateStreamingVolume();
-			streamingController.updateResources();
+			streamingVolumeController.update(dtMilliseconds);
+			streamingController.updateResources(dtMilliseconds, streamingVolumeController.streamingVolume);
 			
 			worldMeshUpdater.update(dtMilliseconds);
 			renderer.render();
