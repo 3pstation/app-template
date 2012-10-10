@@ -8,10 +8,10 @@ git pull origin master
 chmod -R 755 .
 cd ..
 
-git clone git://github.com/eegeo/eegeo-platform-public.git
+rm -rf eegeo-platform-public
+mkdir eegeo-platform-public
 cd eegeo-platform-public
-git checkout .
-git pull origin master
+curl http://cdn1.eegeo.com/eegeo-platform.swc > eegeo-platform.swc
 cd ..
 
 popd
