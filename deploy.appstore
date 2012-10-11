@@ -6,4 +6,4 @@ fi
 
 DIR=${PWD##*/}
 mv ./build/$DIR.swf ./build/APP_NAME.swf
-curl -X PUT -F app=@./build/APP_NAME.swf -F icon=@./icon.png -F name='DISPLAY_NAME' -F entry_point_name=APP_NAMEApp http://appstore.eegeo.com/apps/API_TOKEN
+curl -X PUT -F app=@./build/APP_NAME.swf -F icon=@./icon.png -F name='DISPLAY_NAME' -F entry_point_name=APP_NAMEApp -F api_key=API_KEY https://appstore.eegeo.com/apps/
